@@ -1,6 +1,6 @@
-# FieldStack
+# OnSide
 
-A soccer field discovery and booking aggregator for the Greater Toronto Area. The first slice is the database: operators, venues, fields, and a public waitlist, with PostGIS for radius search.
+A soccer field finding app for the Greater Toronto Area, live on the iOS App Store at [getonside.ca](https://getonside.ca). The first slice is the database: operators, venues, fields, and a public waitlist, with PostGIS for radius search.
 
 ## Stack
 
