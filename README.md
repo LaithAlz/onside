@@ -1,12 +1,18 @@
 # OnSide
 
-A soccer field finding app for the Greater Toronto Area, live on the iOS App Store at [getonside.ca](https://getonside.ca). The first slice is the database: operators, venues, fields, and a public waitlist, with PostGIS for radius search.
+A soccer field finding app for the Greater Toronto Area, live on the iOS App Store at [getonside.ca](https://getonside.ca). Built and shipped solo, with 50+ signed-up users.
+
+Players open the app and find soccer fields near them. The backend answers "what is within X km of me" with a PostGIS radius search.
 
 ## Stack
 
-- **Postgres + PostGIS** via Supabase
-- **TypeScript** seed scripts (`tsx`)
-- `@supabase/supabase-js` v2
+- **API:** Fastify (TypeScript), deployed with Docker on Fly
+- **Database:** Postgres + PostGIS via Supabase, with row-level security and a spatial index for radius search
+- **Caching:** Redis
+- **Mobile:** Expo / React Native, with Google and Apple sign-in
+- **Site:** Next.js marketing and SEO site
+- **CI:** GitHub Actions on every pull request: typecheck, lint, tests, and migration validation
+- **Monitoring:** Sentry and PostHog
 
 ## Project layout
 
